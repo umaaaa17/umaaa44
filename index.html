@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizza Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animasi fade-in untuk galeri */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Animasi tombol WhatsApp */
+    .fab {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+</head>
+<body class="bg-purple-50 font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-purple-700 to-purple-800 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-3xl font-extrabold tracking-widest animate-pulse">Pizza Shop</h1>
+      <nav>
+        <ul class="flex space-x-6 text-lg font-semibold">
+          <li><a href="#menu" class="hover:text-white transition">Menu</a></li>
+          <li><a href="#history" class="hover:text-white transition">Sejarah Pizza</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-purple-500 via-white to-amber-100 py-20 text-center">
+    <h2 class="text-5xl font-bold mb-4 animate-bounce text-purple-900">Selamat Datang di Pizza Shop!</h2>
+    <p class="text-xl max-w-xl mx-auto mb-8 text-purple-800">Nikmati pizza terbaik dengan bahan segar dan cita rasa autentik Italia.</p>
+    <a href="#menu" class="inline-block bg-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-purple-700 transition">Lihat Menu</a>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="container mx-auto px-6 py-16">
+    <h3 class="text-4xl font-bold mb-12 text-center text-purple-700">Menu Kami</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 hover:shadow-purple-300">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca441d69-cc3f-45aa-a95d-a291c5914cd0.png" alt="Delicious margherita pizza with fresh tomato sauce, melted mozzarella cheese, basil leaves, and a golden crispy crust on a white plate with steam rising" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-2 text-purple-800">Margherita</h4>
+          <p class="text-gray-600 mb-4">Tomat segar, mozzarella, dan daun basil.</p>
+          <p class="font-bold text-purple-600">Rp 50.000</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 hover:shadow-purple-300">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9272458f-94f3-4098-a6f3-df4a843d1a08.png" alt="Spicy pepperoni pizza with melted mozzarella cheese, sliced pepperoni, tomato sauce, green bell peppers, and a crispy golden brown crust" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-2 text-purple-800">Pepperoni</h4>
+          <p class="text-gray-600 mb-4">Keju mozzarella dan irisan pepperoni pedas.</p>
+          <p class="font-bold text-purple-600">Rp 65.000</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 hover:shadow-purple-300">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e16659a-44ce-4e6b-9bac-a3bc8b7572e6.png" alt="Colorful vegetarian pizza with fresh spinach, colorful bell peppers, mushrooms, cherry tomatoes, melted mozzarella, and a thin olive oil-based crust" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-2 text-purple-800">Vegetarian</h4>
+          <p class="text-gray-600 mb-4">Sayuran segar, paprika, jamur, dan keju.</p>
+          <p class="font-bold text-purple-600">Rp 55.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section id="history" class="bg-gradient-to-b from-purple-100 to-amber-50 py-16">
+    <div class="container mx-auto px-6">
+      <h3 class="text-4xl font-bold mb-12 text-center text-purple-700">Sejarah Pizza</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="fade-in bg-white rounded-lg shadow-lg p-6 hover:shadow-purple-300 transition">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ad1af802-0084-4575-a6e9-7bec040875bd.png" alt="Historical image of traditional Neapolitan pizza being baked in a wood-fired oven in an old Italian stone kitchen with bakers in aprons" class="rounded-md mb-4 w-full h-48 object-cover" />
+          <h4 class="text-2xl font-semibold mb-2 text-purple-800">Asal Usul Pizza</h4>
+          <p class="text-gray-700">Pizza berasal dari Napoli, Italia pada abad ke-18 sebagai makanan rakyat sederhana.</p>
+        </div>
+        <div class="fade-in bg-white rounded-lg shadow-lg p-6 hover:shadow-purple-300 transition">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e60073b-1c37-433e-972e-c2f75e0ffd9c.png" alt="Classic Pizza Margherita with red tomato sauce, fresh mozzarella, green basil leaves, and white crust arranged in the Italian flag colors" class="rounded-md mb-4 w-full h-48 object-cover" />
+          <h4 class="text-2xl font-semibold mb-2 text-purple-800">Pizza Margherita</h4>
+          <p class="text-gray-700">Diciptakan untuk menghormati Ratu Margherita dengan topping warna bendera Italia.</p>
+        </div>
+        <div class="fade-in bg-white rounded-lg shadow-lg p-6 hover:shadow-purple-300 transition">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f8d73ee-3e75-44cd-b550-a8139583ab99.png" alt="Global pepperoni pizza with sizzling hot pepperoni slices, gooey cheese, tomato base, served on a wooden table with international flags in background" class="rounded-md mb-4 w-full h-48 object-cover" />
+          <h4 class="text-2xl font-semibold mb-2 text-purple-800">Popularitas Global</h4>
+          <p class="text-gray-700">Pizza menyebar ke seluruh dunia dan menjadi salah satu makanan favorit global.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-purple-900 to-purple-500 text-white text-center py-6 mt-12">
+    <p>© 2024 Pizza Shop. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20memesan%20pizza" target="_blank" class="fab bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-lg transition duration-300" aria-label="Hubungi kami via WhatsApp">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a78cff66-bcda-460c-aac2-418fe468d201.png" alt="Ikon WhatsApp hijau dengan gelembung percakapan putih, desain persegi bulat, mewakili chat pesan instan" class="w-16 h-16 rounded-full" />
+    </a>
+  </div>
+
+  <script>
+    // Animasi fade-in saat scroll ke elemen galeri sejarah
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.3,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('visible');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
